@@ -26,8 +26,4 @@ var app = new Vue ({
             this.lista.splice(indice, 1);
         }
     }
-
-
-
-
 });
