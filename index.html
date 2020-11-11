@@ -12,16 +12,17 @@
 
             <div id="wrapper">
 
-                <input type="text" placeholder="Inserisci il testo">
+                <input v-on:keyup.13="aggiunta_elemento" v-model="aggiunta" type="text" placeholder="Inserisci il testo">
 
-                <button type="button" name="button">Clicca qui</button>
+                <button @click="aggiunta_elemento()" type="button" name="button">Clicca qui</button>
 
                 <div class="elenco">
                     <ol>
-                        <li v-for="alimenti in lista">
+                        <li @click="rimuovi_elemento(indice)"  v-for="(alimenti, indice) in lista">
                             {{alimenti}}
                         </li>
                     </ol>
+
                 </div>
 
 

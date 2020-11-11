@@ -8,12 +8,23 @@ var app = new Vue ({
 
     data: {
 
+        aggiunta: '',
+
         lista: ['pane', 'latte', 'mozzarella', 'pasta', 'carne']
     },
 
     methods: {
 
-        
+        aggiunta_elemento() {
+
+            this.lista.push(this.aggiunta);
+            this.aggiunta = '';
+        },
+
+        rimuovi_elemento(indice) {
+
+            this.lista.splice(indice, 1);
+        }
     }
 
 
