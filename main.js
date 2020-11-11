@@ -10,7 +10,7 @@ var app = new Vue ({
 
         aggiunta: '',
 
-        lista: ['pane', 'latte', 'mozzarella', 'pasta', 'carne']
+        lista: ['Pane', 'Latte', 'Mozzarella', 'Pasta', 'Carne']
     },
 
     methods: {

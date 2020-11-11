@@ -11,14 +11,15 @@
         <div id="root">
 
             <div id="wrapper">
+                <h1>Aggiungi alimento nella lista della spesa</h1>
+                <input v-on:keyup.13="aggiunta_elemento()" v-model="aggiunta" type="text" placeholder="Inserisci il testo">
 
-                <input v-on:keyup.13="aggiunta_elemento" v-model="aggiunta" type="text" placeholder="Inserisci il testo">
-
-                <button @click="aggiunta_elemento()" type="button" name="button">Clicca qui</button>
-
+                <button @click="aggiunta_elemento()" type="button" name="button">Aggiungi</button>
+                <h2>Lista Spesa</h2>
                 <div class="elenco">
                     <ol>
-                        <li @click="rimuovi_elemento(indice)"  v-for="(alimenti, indice) in lista">
+                        <li @click="rimuovi_elemento(indice)"
+                        v-for="(alimenti, indice) in lista">
                             {{alimenti}}
                         </li>
                     </ol>
